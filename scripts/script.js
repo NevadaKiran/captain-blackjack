@@ -8,9 +8,9 @@ $(document).ready(function(){
   });
 });
 
-var getFirstRandomCard = function(){
+var getFirstRandomCard = function(card-id){
     var randomNumber = Math.floor((Math.random() * 6) + 1);
-    document.getElementById("card").setAttribute("src", deckOfCards[randomNumber].imgSrc);
+    document.getElementById(card-id).setAttribute("src", deckOfCards[randomNumber].imgSrc);
 }
 
 var deal = function() {
@@ -19,8 +19,14 @@ var deal = function() {
 };
 
 $("#replay").click(function() {
-  getFirstRandomCard();
+ getFirstRandomCard(card-1);
+getFirstRandomCard(card-2);
 });
+
+// var getSecondRandomCard = function(card-id){
+//     var randomNumber = Math.floor((Math.random() * 52) + 1);
+//     document.getElementById("card-id").setAttribute("src", deckOfCards[randomNumber].imgSrc);
+// }
 
 $("#hit").click(function() {
 
@@ -33,12 +39,12 @@ var Card = function(suit, cardValue, imgSrc) {
 }
 
 var deckOfCards = []
-deckOfCards[0] = new Card('clubs', 2, 'SVG-cards/2_of_clubs.svg');
-deckOfCards[1] = new Card('clubs', 3, 'SVG-cards/3_of_clubs.svg');
-deckOfCards[2] = new Card('clubs', 4, 'SVG-cards/4_of_clubs.svg');
-deckOfCards[3] = new Card('clubs', 5, 'SVG-cards/5_of_clubs.svg');
-deckOfCards[4] = new Card('clubs', 6, 'SVG-cards/6_of_clubs.svg');
-deckOfCards[5] = new Card('clubs', 7, 'SVG-cards/7_of_clubs.svg');
+deckOfCards[0] = new Card('clubs', 2, 'SVG-cards-1.3/2_of_clubs.svg');
+deckOfCards[1] = new Card('clubs', 3, 'SVG-cards-1.3/3_of_clubs.svg');
+deckOfCards[2] = new Card('clubs', 4, 'SVG-cards-1.3/4_of_clubs.svg');
+deckOfCards[3] = new Card('clubs', 5, 'SVG-cards-1.3/5_of_clubs.svg');
+deckOfCards[4] = new Card('clubs', 6, 'SVG-cards-1.3/6_of_clubs.svg');
+deckOfCards[5] = new Card('clubs', 7, 'SVG-cards-1.3/7_of_clubs.svg');
 
 
 
