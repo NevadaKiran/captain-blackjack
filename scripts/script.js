@@ -9,12 +9,13 @@ $(document).ready(function(){
 });
 
 var getFirstRandomCard = function(card_id){
-    var randomNumber = Math.floor((Math.random() * 6) + 1);
+    var randomNumber = Math.floor((Math.random() * 23) + 1);
     document.getElementById(card_id).setAttribute("src", deckOfCards[randomNumber].imgSrc);
+    
 }
 
 var deal = function() {
-  card = Math.floor(Math.random() * 6 + 1);
+  card = Math.floor(Math.random() * 23 + 1);
   return card;
 };
 
@@ -22,18 +23,23 @@ var deal = function() {
 $("#replay").click(function() {
 getFirstRandomCard("card-1");
 getFirstRandomCard("card-2");
-getFirstRandomCard("card-3");
-getFirstRandomCard("card-4");
+getFirstRandomCard("card3");
+getFirstRandomCard("card4");
 });
 
 var getSecondRandomCard = function(hitCard_id){
-    var randomNumber = Math.floor((Math.random() * 6) + 1);
+    var randomNumber = Math.floor((Math.random() * 23) + 1);
     document.getElementById(hitCard_id).setAttribute("src", deckOfCards[randomNumber].imgSrc);
 }
 
 $("#hit").click(function() {
 getSecondRandomCard("hitCard1");
-getSecondRandomCard("hitCard2")
+})
+
+$("#stand").click(function(){
+  while (card3.cardValue + card4.cardValue < 16) {
+    getSecondRandomCard("hitCard1")
+  }
 })
 
 var Card = function(suit, cardValue, imgSrc) {
@@ -49,6 +55,25 @@ deckOfCards[2] = new Card('clubs', 4, 'SVG-cards-1.3/4_of_clubs.svg');
 deckOfCards[3] = new Card('clubs', 5, 'SVG-cards-1.3/5_of_clubs.svg');
 deckOfCards[4] = new Card('clubs', 6, 'SVG-cards-1.3/6_of_clubs.svg');
 deckOfCards[5] = new Card('clubs', 7, 'SVG-cards-1.3/7_of_clubs.svg');
+deckOfCards[6] = new Card('clubs', 8, 'SVG-cards-1.3/8_of_clubs.svg');
+deckOfCards[7] = new Card('clubs', 9, 'SVG-cards-1.3/9_of_clubs.svg');
+deckOfCards[8] = new Card('clubs', 10, 'SVG-cards-1.3/10_of_clubs.svg');
+deckOfCards[9] = new Card('clubs', 10, 'SVG-cards-1.3/jack_of_clubs2.svg');
+deckOfCards[10] = new Card('clubs', 10, 'SVG-cards-1.3/queen_of_clubs2.svg');
+deckOfCards[11] = new Card('clubs', 10, 'SVG-cards-1.3/king_of_clubs2.svg');
+
+deckOfCards[12] = new Card('clubs', 2, 'SVG-cards-1.3/2_of_hearts.svg');
+deckOfCards[13] = new Card('clubs', 3, 'SVG-cards-1.3/3_of_hearts.svg');
+deckOfCards[14] = new Card('clubs', 4, 'SVG-cards-1.3/4_of_hearts.svg');
+deckOfCards[15] = new Card('clubs', 5, 'SVG-cards-1.3/5_of_hearts.svg');
+deckOfCards[16] = new Card('clubs', 6, 'SVG-cards-1.3/6_of_hearts.svg');
+deckOfCards[17] = new Card('clubs', 7, 'SVG-cards-1.3/7_of_hearts.svg');
+deckOfCards[18] = new Card('clubs', 8, 'SVG-cards-1.3/8_of_hearts.svg');
+deckOfCards[19] = new Card('clubs', 9, 'SVG-cards-1.3/9_of_hearts.svg');
+deckOfCards[20] = new Card('clubs', 10, 'SVG-cards-1.3/10_of_hearts.svg');
+deckOfCards[21] = new Card('clubs', 10, 'SVG-cards-1.3/jack_of_hearts2.svg');
+deckOfCards[22] = new Card('clubs', 10, 'SVG-cards-1.3/queen_of_hearts2.svg');
+deckOfCards[23] = new Card('clubs', 10, 'SVG-cards-1.3/king_of_hearts2.svg');
 
 
 
