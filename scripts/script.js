@@ -8,10 +8,23 @@ $(document).ready(function(){
   });
 });
 
+var getFirstRandomCard = function(){
+    var randomNumber = Math.floor((Math.random() * 6) + 1);
+    document.getElementById("card").setAttribute("src", deckOfCards[randomNumber].imgSrc);
+}
+
 var deal = function() {
-  card = Math.floor(Math.random() * 52 + 1);
+  card = Math.floor(Math.random() * 6 + 1);
   return card;
 };
+
+$("#replay").click(function() {
+  getFirstRandomCard();
+});
+
+$("#hit").click(function() {
+
+})
 
 var Card = function(suit, cardValue, imgSrc) {
   this.suit = suit;
@@ -30,11 +43,7 @@ deckOfCards[5] = new Card('clubs', 7, 'SVG-cards/7_of_clubs.svg');
 
 
 
-var getFirstRandomCard = function(){
-    var randomNumber = Math.floor((Math.random() * 52) + 1);
 
-    document.getElementById("card").setAttribute("src", deckOfCards[randomNumber].imgSrc);
-}
 
 // var Card = function(n,s) {
 //         var number = n;
