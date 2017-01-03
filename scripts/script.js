@@ -8,9 +8,9 @@ $(document).ready(function(){
   });
 });
 
-var getFirstRandomCard = function(card-id){
+var getFirstRandomCard = function(card_id){
     var randomNumber = Math.floor((Math.random() * 6) + 1);
-    document.getElementById(card-id).setAttribute("src", deckOfCards[randomNumber].imgSrc);
+    document.getElementById(card_id).setAttribute("src", deckOfCards[randomNumber].imgSrc);
 }
 
 var deal = function() {
@@ -18,13 +18,14 @@ var deal = function() {
   return card;
 };
 
+
 $("#replay").click(function() {
- getFirstRandomCard(card-1);
-getFirstRandomCard(card-2);
+getFirstRandomCard("card-1");
+getFirstRandomCard("card-2");
 });
 
 // var getSecondRandomCard = function(card-id){
-//     var randomNumber = Math.floor((Math.random() * 52) + 1);
+//     var randomNumber = Math.floor((Math.random() * 52gi) + 1);
 //     document.getElementById("card-id").setAttribute("src", deckOfCards[randomNumber].imgSrc);
 // }
 
