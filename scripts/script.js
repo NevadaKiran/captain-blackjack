@@ -26,13 +26,14 @@ getFirstRandomCard("card-3");
 getFirstRandomCard("card-4");
 });
 
-// var getSecondRandomCard = function(card-id){
-//     var randomNumber = Math.floor((Math.random() * 52gi) + 1);
-//     document.getElementById("card-id").setAttribute("src", deckOfCards[randomNumber].imgSrc);
-// }
+var getSecondRandomCard = function(hitCard_id){
+    var randomNumber = Math.floor((Math.random() * 6) + 1);
+    document.getElementById(hitCard_id).setAttribute("src", deckOfCards[randomNumber].imgSrc);
+}
 
 $("#hit").click(function() {
-
+getSecondRandomCard("hitCard1");
+getSecondRandomCard("hitCard2")
 })
 
 var Card = function(suit, cardValue, imgSrc) {
