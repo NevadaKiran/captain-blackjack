@@ -11,7 +11,7 @@ $(document).ready(function(){
 var getFirstRandomCard = function(card_id){
     var randomNumber = Math.floor((Math.random() * 23) + 1);
     document.getElementById(card_id).setAttribute("src", deckOfCards[randomNumber].imgSrc);
-    
+
 }
 
 var deal = function() {
@@ -25,6 +25,8 @@ getFirstRandomCard("card-1");
 getFirstRandomCard("card-2");
 getFirstRandomCard("card3");
 getFirstRandomCard("card4");
+$('#"yourScore"').html('card-1.cardValue' + 'card-2.cardValue');
+
 });
 
 var getSecondRandomCard = function(hitCard_id){
