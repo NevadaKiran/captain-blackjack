@@ -22,6 +22,8 @@ var deal = function() {
 $("#replay").click(function() {
 getFirstRandomCard("card-1");
 getFirstRandomCard("card-2");
+getFirstRandomCard("card-3");
+getFirstRandomCard("card-4");
 });
 
 // var getSecondRandomCard = function(card-id){
