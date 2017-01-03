@@ -20,18 +20,20 @@ var Card = function(suit, cardValue, imgSrc) {
 }
 
 var deckOfCards = []
-var tw_of_clubs = new Card('clubs', 2, 'SVG-cards-1.3/2_of_clubs.svg');
-var three_of_clubs = new Card('clubs', 3, 'SVG-cards-1.3/3_of_clubs.svg');
-var four_of_clubs = new Card('clubs', 4, 'SVG-cards-1.3/4_of_clubs.svg');
-var five_of_clubs = new Card('clubs', 5, 'SVG-cards-1.3/5_of_clubs.svg');
-var six_of_clubs = new Card('clubs', 6, 'SVG-cards-1.3/6_of_clubs.svg');
+deckOfCards[0] = new Card('clubs', 2, 'SVG-cards/2_of_clubs.svg');
+deckOfCards[1] = new Card('clubs', 3, 'SVG-cards/3_of_clubs.svg');
+deckOfCards[2] = new Card('clubs', 4, 'SVG-cards/4_of_clubs.svg');
+deckOfCards[3] = new Card('clubs', 5, 'SVG-cards/5_of_clubs.svg');
+deckOfCards[4] = new Card('clubs', 6, 'SVG-cards/6_of_clubs.svg');
+deckOfCards[5] = new Card('clubs', 7, 'SVG-cards/7_of_clubs.svg');
 
-deckOfCards.push(two_of_clubs)
+
 
 
 var getFirstRandomCard = function(){
     var randomNumber = Math.floor((Math.random() * 52) + 1);
-    document.getElementById("card").setAttribute("src", deckOfCards[randomNumber].SVG-cards-1.3);
+
+    document.getElementById("card").setAttribute("src", deckOfCards[randomNumber].imgSrc);
 }
 
 // var Card = function(n,s) {
