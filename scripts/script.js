@@ -8,10 +8,16 @@ $(document).ready(function(){
   });
 });
 
+// var wins = 0
+// var losses = 0
+
+// yourScore = 0
+// dealerScore = 0
+
 var getFirstRandomCard = function(card_id){
     var randomNumber = Math.floor((Math.random() * 23) + 1);
     document.getElementById(card_id).setAttribute("src", deckOfCards[randomNumber].imgSrc);
-
+    // incrementScore
 }
 
 var deal = function() {
@@ -32,17 +38,29 @@ $('#"yourScore"').html('card-1.cardValue' + 'card-2.cardValue');
 var getSecondRandomCard = function(hitCard_id){
     var randomNumber = Math.floor((Math.random() * 23) + 1);
     document.getElementById(hitCard_id).setAttribute("src", deckOfCards[randomNumber].imgSrc);
+    // incrementScore
+    // if busted
+      // incrementLosses
+      // startOver
+
 }
 
 $("#hit").click(function() {
 getSecondRandomCard("hitCard1");
 })
+$("#hitAgain").click(function() {
+getSecondRandomCard("hitCard3");
+})
 
 $("#stand").click(function(){
   while (card3.cardValue + card4.cardValue < 16) {
-    getSecondRandomCard("hitCard1")
+    getSecondRandomCard("hitCard2")
   }
 })
+
+var playerScore = function() {
+} return(cardValue(card-1 + card-2))
+document.getElementById('playerScore').innerHTML = "Score: " + score;
 
 var Card = function(suit, cardValue, imgSrc) {
   this.suit = suit;
