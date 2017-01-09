@@ -58,9 +58,33 @@ $("#stand").click(function(){
   }
 })
 
-var playerScore = function() {
-} return(cardValue(card-1 + card-2))
-document.getElementById('playerScore').innerHTML = "Score: " + score;
+// var playerScore = function() {
+// } return(cardValue(card-1 + card-2))
+// document.getElementById('playerScore').innerHTML = "Score: " + cardValue;
+// var dealerhand = function(x, y) {
+//     dealerScore = Math.floor(Math.random()*(21 - 17 + 1)+17);
+//     return dealerScore;
+// }
+// function score() {
+
+//     if ((cardValue(card1) + cardValue(card2)) > 22){
+//         return "Busted!";
+//     }
+//     else if (getValue(dealerScore) > getValue(card1) + getValue(card2)){
+//         return "You lose!";
+//     }
+//     else if (cardValue(dealerScore) === cardValue(card1) + cardValue(card2)){
+//         return "Draw!";
+//     }
+//     else{
+//         return cardValue(card1) + cardValue(card2);
+//     }
+// }
+$( ".dealerScore" ).append( "<h2>Dealer Wins</h2>" );
+
+var score = cardValue {
+$( "p" ).append( "<strong>("score")</strong>" );
+}
 
 var Card = function(suit, cardValue, imgSrc) {
   this.suit = suit;
