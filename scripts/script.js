@@ -82,9 +82,9 @@ $("#stand").click(function(){
 // }
 $( ".dealerScore" ).append( "<h2>Dealer Wins</h2>" );
 
-var score = cardValue {
-$( "p" ).append( "<strong>("score")</strong>" );
-}
+// var score = cardValue
+$( "p" ).append( "<strong>(cardValue)</strong>" );
+
 
 var Card = function(suit, cardValue, imgSrc) {
   this.suit = suit;
