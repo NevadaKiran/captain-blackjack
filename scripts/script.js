@@ -45,22 +45,11 @@ var getSecondRandomCard = function(hitCard_id){
 
 }
 
-$("#hit").click(function() {
-getSecondRandomCard("hitCard1");
-})
-$("#hitAgain").click(function() {
-getSecondRandomCard("hitCard3");
-})
 
-$("#stand").click(function(){
-  while (card3.cardValue + card4.cardValue < 16) {
-    getSecondRandomCard("hitCard2")
-  }
-})
 
 // var playerScore = function() {
 // } return(cardValue(card-1 + card-2))
-// document.getElementById('playerScore').innerHTML = "Score: " + cardValue;
+
 // var dealerhand = function(x, y) {
 //     dealerScore = Math.floor(Math.random()*(21 - 17 + 1)+17);
 //     return dealerScore;
@@ -80,6 +69,8 @@ $("#stand").click(function(){
 //         return cardValue(card1) + cardValue(card2);
 //     }
 // }
+
+// document.getElementById('playerScore').innerHTML = "Score: " + cardValue;
 $( ".dealerScore" ).append( "<h2>Dealer Wins</h2>" );
 
 // var score = cardValue
@@ -164,7 +155,7 @@ deckOfCards[23] = new Card('clubs', 10, 'SVG-cards-1.3/king_of_hearts2.svg');
 //     return cardD; //should be return card;
 // }
 
-$('#card1').html('<img src="img/2_of_clubs.svg"></img>')
+// $('#card1').html('<img src="img/2_of_clubs.svg"></img>')
 
 
 
@@ -173,3 +164,18 @@ $('#card1').html('<img src="img/2_of_clubs.svg"></img>')
     // Private local variables
     // var s = Math.floor(Math.random() * 4 + 1);
     // var n = Math.floor(Math.random() * 4 + 1);
+    window.onload = function(){
+      $("#hit").click(function() {
+      getSecondRandomCard("hitCard1");
+      })
+      $("#hitAgain").click(function() {
+      getSecondRandomCard("hitCard3");
+      })
+
+      $("#stand").click(function(){
+        while (card3.cardValue + card4.cardValue < 16) {
+          getSecondRandomCard("hitCard2")
+        }
+      })
+
+}
